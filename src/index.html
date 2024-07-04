@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuperMealTime - Home</title>
+
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <img src="assets/images/Food.png" style="width: 130px;" alt="">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MealCategory.html">Meal Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Favourite.html">Saved Favourite</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+
+    <section id="home" class="w3l-banner py-5">
+        <div class="banner-content">
+            <div class="container py-4">
+                <div class="row align-items-center pt-sm-5 pt-4">
+                    <div class="col-md-6">
+                        <h3 class="mb-lg-4 mb-3 pb-lg-2">SUPER MEAL TIME! <span class="d-block"></span>
+                        </h3>
+                        <p class="banner-sub">~Healthy, tasty and easy to make recipes for you to eat everyday~</p>
+
+                    </div>
+                    <div class="col-md-6 right-banner-2 text-end position-relative">
+                        <div class="sub-banner-image mx-auto">
+                            <img src="assets/images/Topview.webp" class="img-fluid position-relative" alt=" ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- owl carousel -->
+    <script src="assets/js/owl.carousel.js"></script>
+
+    <!-- theme switch js (light and dark)-->
+    <script src="assets/js/theme-change.js"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap -->
+    <!-- //Js scripts -->
+</body>
+
+</html>
